@@ -1,0 +1,9 @@
+{% for product in collections[collection_name].products %}
+  <div class="product">
+    <img src="{{ product.featured_image | img_url: '300x300' }}" alt="{{ product.title }}">
+    <h2>{{ product.title }}</h2>
+    <p>{{ product.price | money }}</p>
+    <p>{{ product.compare_at_price | money }}</p>
+    <a href="{{ product.url }}">{{ button_text }}</a>
+  </div>
+{% endfor %}
